@@ -1,0 +1,11 @@
+version: "3"
+
+silent: true
+
+tasks:
+  solutions:
+    cmds:
+      - go test -count=1 ./... -v | grep 'Day'
+  lint:
+    cmds:
+      - golangci-lint cache clean && golangci-lint run ./...
