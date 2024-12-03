@@ -21,3 +21,11 @@ func ReadLines(filename string, lines int) []string {
 	}
 	return slices.Clip(out)
 }
+
+func ReadAll(filename string) string {
+	b, err := os.ReadFile(filename)
+	if err != nil {
+		log.Fatal("file not found")
+	}
+	return string(b)
+}
