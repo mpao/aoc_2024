@@ -1,0 +1,19 @@
+run:
+  go: "1.23"
+linters:
+  # default enabled linters: errcheck, gosimple, govet, ineffassign, staticcheck, typecheck, unused
+  disable:
+    - errcheck
+  enable:
+    - copyloopvar # checks for pointers to enclosing loop variables
+    - forbidigo # forbids identifiers
+    - gci # controls Go package import order and makes it always deterministic.
+    - gocritic # provides diagnostics that check for bugs, performance and style issues
+    - govet # examines Go source code and reports suspicious constructs
+    - reassign # checks that package variables are not reassigned
+    - revive # fast, configurable, extensible, flexible linter for Go, drop-in replacement of golint
+    - unconvert # removes unnecessary type conversions
+    - unparam # reports unused function parameters
+    - usestdlibvars # detects the possibility to use variables/constants from the Go standard library
+    - unused # reports unused constants, variables, functions and types.
+    - wastedassign # finds wasted assignment statements

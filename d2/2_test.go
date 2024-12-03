@@ -1,12 +1,13 @@
 package main
 
 import (
-	"aoc24/common"
 	"errors"
 	"math"
 	"strconv"
 	"strings"
 	"testing"
+
+	"aoc24/common"
 )
 
 func TestPart_One(t *testing.T) {

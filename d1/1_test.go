@@ -1,11 +1,12 @@
 package main
 
 import (
-	"aoc24/common"
 	"fmt"
 	"math"
 	"sort"
 	"testing"
+
+	"aoc24/common"
 )
 
 func TestPart_One(t *testing.T) {
