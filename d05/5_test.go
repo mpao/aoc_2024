@@ -33,7 +33,7 @@ func init() {
 }
 
 func TestPart_One(t *testing.T) {
-	var selection [][]int
+	var count int
 	for _, up := range updates {
 		valid := true
 		for i := 0; i < len(up)-1; i++ {
@@ -44,12 +44,8 @@ func TestPart_One(t *testing.T) {
 			}
 		}
 		if valid {
-			selection = append(selection, up)
+			count += up[len(up)/2]
 		}
-	}
-	var count int
-	for _, v := range selection {
-		count += v[len(v)/2]
 	}
 	t.Log("Day V, part 1:", count)
 }
